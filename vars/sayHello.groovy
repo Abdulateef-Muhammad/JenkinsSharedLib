@@ -11,22 +11,22 @@ def call(String repoUrl) {
            }
            stage("Checkout Code") {
              steps {
-               sh "cloning repo .."
+               println "Checkout Code .."
              }
            }
            stage("Cleaning workspace") {
                steps {
-                   sh "step"
+                   println "Cleanig workspace ..."
                }
            }
            stage("Running Testcase") {
               steps {
-                   sh "step"
+                   println "Running tescase ..."
                }
            }
            stage("Packing Application") {
                steps {
-                   sh "doing sth..."
+                   println "Packing app"
                }
            }
        }
