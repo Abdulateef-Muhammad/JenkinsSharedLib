@@ -5,8 +5,8 @@ def call(String repoUrl) {
        stages {
            stage("Tools initialization") {
                steps {
-                   sh "mvn --version"
-                   sh "java -version"
+                   
+                   sh "docker --version"
                }
            }
            stage("Checkout Code") {
@@ -16,17 +16,17 @@ def call(String repoUrl) {
            }
            stage("Cleaning workspace") {
                steps {
-                   sh "mvn clean"
+                   sh "step"
                }
            }
            stage("Running Testcase") {
               steps {
-                   sh "mvn test"
+                   sh "step"
                }
            }
            stage("Packing Application") {
                steps {
-                   sh "mvn package -DskipTests"
+                   sh "doing sth..."
                }
            }
        }
