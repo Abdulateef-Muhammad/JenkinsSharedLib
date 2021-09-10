@@ -10,7 +10,9 @@ def call(String repoUrl) {
                }
            }
            stage("Checkout Code") {
-            sh "cloning repo .."
+             steps {
+               sh "cloning repo .."
+             }
            }
            stage("Cleaning workspace") {
                steps {
